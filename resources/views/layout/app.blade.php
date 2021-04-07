@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <title>Laravel</title>
+    <title>Envuso Framework</title>
+
+    <link rel="icon" type="image/png" href="/assets/icon.png">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -16,18 +18,19 @@
 
 <div class="flex flex-row h-full min-h-screen relative">
 
-    <div class="bg-gray-800 min-h-screen flex flex-col w-full sidebar">
+    <div class="bg-gray-900  min-h-screen flex flex-col w-full sidebar">
 
-        <div class="fixed w-full sidebar overflow-y-auto max-h-screen">
-            <div class="py-6 flex items-center justify-center border-b border-gray-700">
-                <p class="text-2xl tracking-wide text-blue-400 font-light uppercase block">
+        <div class="fixed w-full sidebar overflow-y-auto min-h-screen border-r-2 border-gray-800">
+            <div class="bg-gradient-to-t from-gray-900 to-gray-800  pt-6 px-4 flex items-center justify-center border-b border-gray-700">
+                {{--<p class="text-2xl tracking-wide text-blue-400 font-light uppercase block">
                     Envuso Docs
-                </p>
+                </p>--}}
+                <img src="/assets/logo.png" />
             </div>
 
             <div class="px-6 py-5 ">
 
-                <x-sidebar-item :route="route('overview.home')" text="Home" />
+                <x-sidebar-item :route="route('overview.setup')" text="Getting Started" />
 
                 <x-sidebar-item-group title="Http">
                     <x-sidebar-group-item :route="route('overview.routes')" text="Routes" />
@@ -46,6 +49,7 @@
                     <x-sidebar-group-item :route="route('overview.authentication')" text="Authentication" />
                 </x-sidebar-item-group>
 
+                <x-sidebar-item :route="route('overview.cli')" text="CLI" />
                 <x-sidebar-item :route="route('overview.decorators')" text="Decorators" />
 
 

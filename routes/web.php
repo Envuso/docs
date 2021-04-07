@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', '/usage')->name('landing');
+Route::redirect('/', '/setup')->name('landing');
 
 Route::name('overview.')->group(function () {
 
-    Route::view('/usage', 'welcome')->name('home');
+    Route::view('/setup', 'setup')->name('setup');
     Route::view('/routes', 'routes')->name('routes');
     Route::view('/controllers', 'controllers')->name('controllers');
     Route::view('/middleware', 'middleware')->name('middleware');
@@ -27,6 +27,7 @@ Route::name('overview.')->group(function () {
     Route::view('/decorators', 'decorators')->name('decorators');
     Route::view('/models', 'models')->name('models');
     Route::view('/query-builder', 'query-builder')->name('query-builder');
+    Route::view('/cli', 'cli')->name('cli');
 
 
     Route::view('/introduction', 'introduction')->name('introduction');
