@@ -25,7 +25,7 @@
                 {{--<p class="text-2xl tracking-wide text-blue-400 font-light uppercase block">
                     Envuso Docs
                 </p>--}}
-                <img src="/assets/logo.png" />
+                <img src="/assets/mid.png" />
             </div>
 
             <div class="px-6 py-5 ">
