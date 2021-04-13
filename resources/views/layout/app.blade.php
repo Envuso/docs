@@ -12,8 +12,6 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <!-- Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -26,11 +24,17 @@
 
         <div
             class="fixed w-full md:w-64 lg:w-64 md:sidebar lg:sidebar overflow-y-auto min-h-screen border-r-2 border-gray-800">
-            <div class="bg-gradient-to-t from-gray-900 to-gray-800  pt-6 px-4 flex items-center justify-center border-b border-gray-700">
+            <div class="relative bg-gradient-to-t from-gray-900 to-gray-800  pt-6 px-4 flex items-center justify-center border-b border-gray-700">
+                <i id="menuIcon" class="absolute z-10 left-4 top-4 p-2 text-gray-300 visible md:invisible lg:invisible">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </i>
+
                 <img src="/assets/mid.png" />
             </div>
-            <i id="menuIcon" class="material-icons ml-36 text-gray-300 visible md:invisible lg:invisible"
-               style="vertical-align: center; font-size: 64px;">menu</i>
+
+
             <div id="sideMenu" class="px-6 py-5 hidden md:block lg:block">
 
                 <x-sidebar-item :route="route('overview.setup')" text="Getting Started" />

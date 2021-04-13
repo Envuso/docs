@@ -4,7 +4,7 @@ function toggleMenu() {
     if (sideMenu.id !== null) {
         sideMenu.classList.toggle('hidden');
         sideMenu.classList.toggle('bg-gray-700');
-        menuIcon.classList.toggle('bg-gray-700');
+        menuIcon.classList.toggle('hamburger-enabled');
     }
 }
 

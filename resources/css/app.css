@@ -8,6 +8,10 @@
     max-width: 250px;
 }
 
+.hamburger-enabled {
+    @apply rounded-md shadow bg-gray-700;
+}
+
 .content {
     /*position: absolute;*/
     /*left: 250px;*/
