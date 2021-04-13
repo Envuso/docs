@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./sidemenu');
 
 window.hljs = require('highlight.js');
 import 'highlight.js/styles/atom-one-dark.css';

@@ -13,7 +13,6 @@ require('laravel-mix-blade-reload');
  */
 
 mix.js("resources/js/app.js", "public/js")
-    .js(["resources/js/sidemenu.js"], "public/js/nav.js")
     .postCss("resources/css/app.css", "public/css", [
         require("tailwindcss"),
     ])
