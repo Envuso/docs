@@ -4,17 +4,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 
+.body-wrapper {
+    @apply flex overflow-hidden h-screen relative;
+}
+
 .sidebar {
-    max-width: 250px;
+    @apply border-r-0 border-gray-800 bg-gray-900;
+    @apply min-h-screen h-full overflow-x-hidden overflow-y-auto w-full fixed;
+    @apply sm:w-64 md:w-64 lg:w-64 sm:border-r-2 flex-col;
 }
 
 .hamburger-enabled {
-    @apply rounded-md shadow bg-gray-700;
+    @apply rounded-md shadow text-gray-400;
 }
 
 .content {
-    /*position: absolute;*/
-    /*left: 250px;*/
+    @apply ml-0 sm:ml-64;
+    overflow-y: auto;
 }
 
 .structure {
