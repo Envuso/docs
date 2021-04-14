@@ -31,7 +31,12 @@
 
             <x-sidebar-item :route="route('overview.setup')" text="Getting Started" />
 
-            <x-sidebar-item-group title="Http">
+            <x-sidebar-item-group title="Prologue">
+                <x-sidebar-group-item :route="route('overview.release_notes')" text="Release Notes" />
+                <x-sidebar-group-item :route="route('overview.contribute')" text="Contribute" />
+            </x-sidebar-item-group>
+
+            <x-sidebar-item-group title="HTTP">
                 <x-sidebar-group-item :route="route('overview.routes')" text="Routes" />
                 <x-sidebar-group-item :route="route('overview.request')" text="Request" />
                 <x-sidebar-group-item :route="route('overview.response')" text="Response" />

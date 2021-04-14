@@ -17,6 +17,8 @@ Route::redirect('/', '/setup')->name('landing');
 
 Route::name('overview.')->group(function () {
 
+    Route::view('/release_notes', 'release_notes')->name('release_notes');
+    Route::view('/contribute', 'contribute')->name('contribute');
     Route::view('/setup', 'setup')->name('setup');
     Route::view('/routes', 'routes')->name('routes');
     Route::view('/controllers', 'controllers')->name('controllers');
