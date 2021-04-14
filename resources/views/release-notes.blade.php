@@ -1,11 +1,11 @@
-@extends('docs.resources.views.layout.app')
+@extends('layout.app')
 
 @section('content')
 
     <x-container>
 
 
-        <x-title>Query Builder</x-title>
+        <x-title>Release Notes</x-title>
 
         <x-subtitle>
             TBD

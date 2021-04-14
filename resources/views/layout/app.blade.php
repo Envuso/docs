@@ -32,7 +32,7 @@
             <x-sidebar-item :route="route('overview.setup')" text="Getting Started" />
 
             <x-sidebar-item-group title="Prologue">
-                <x-sidebar-group-item :route="route('overview.release_notes')" text="Release Notes" />
+                <x-sidebar-group-item :route="route('overview.release-notes')" text="Release Notes" />
                 <x-sidebar-group-item :route="route('overview.contribute')" text="Contribute" />
             </x-sidebar-item-group>
 

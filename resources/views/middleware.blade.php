@@ -1,4 +1,4 @@
-@extends('docs.resources.views.layout.app')
+@extends('layout.app')
 
 @section('content')
 
