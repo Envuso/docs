@@ -21,12 +21,12 @@
             Installation
         </x-title>
 
-        <x-code lang="sh" whitespace="            ">
+        <x-code whitespace="            ">
             npm install @envuso/cli -g
             yarn global add @envuso/cli
             npx @envuso/cli
 
-            //You can now use "envuso" to create and manage your project
+            * You can now use "envuso" to create and manage your project
         </x-code>
 
         <x-title>
