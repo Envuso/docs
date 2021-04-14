@@ -5,7 +5,7 @@
     <x-container>
 
 
-        <x-title>Middleware</x-title>
+        <x-title>Query Builder</x-title>
 
         <x-subtitle>
             TBD
