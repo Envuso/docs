@@ -5,9 +5,15 @@
     <x-container>
 
 
-        <x-title>Routes</x-title>
+        <x-header>Routes</x-header>
+        <ul>
+            <x-context>Where are they defined</x-context>
+            <x-context>What methods can I use</x-context>
+            <x-context>Accessing the request</x-context>
+            <x-context>Accessing the response</x-context>
+        </ul>
 
-        <x-subtitle>Where are they defined?</x-subtitle>
+        <x-title>Where are they defined</x-title>
         <x-text>
             They are defined alongside your controller, you have two ways to
             register the structure of your route
@@ -35,7 +41,7 @@
             by sending a POST request to <strong>/auth/login</strong>
         </div>
 
-        <x-subtitle>What methods can I use?</x-subtitle>
+        <x-title>What methods can I use</x-title>
 
         <div class="flex flex-col">
 
@@ -57,9 +63,9 @@
 
 
 
-        <x-subtitle>
+        <x-title>
            Accessing the request
-        </x-subtitle>
+        </x-title>
         <x-text>
             I was so tired of adding the request/response to the controller method
             and then passing it through my code, it becomes gross, hopefully we agree.
@@ -81,9 +87,9 @@
             fastify request with <x-code :inline="true">request().fastifyRequest</x-code>
         </div>
 
-        <x-subtitle>
+        <x-title>
             Accessing the response
-        </x-subtitle>
+        </x-title>
 
         <x-code whitespace="        ">
         {{--@formatter:off--}}
