@@ -3,28 +3,32 @@
 @section('content')
     <x-container>
 
-        <x-title>Controllers</x-title>
+        <x-header>Controllers</x-header>
+        <ul>
+            <x-context>Controllers can be generated</x-context>
+        </ul>
 
-        <x-subtitle>
+
+        <x-title>
             Controllers can be generated
-        </x-subtitle>
+        </x-title>
         <x-text>
             First of all, save yourself the hassle, controllers can be generated.
             <br>
             Here's what available:
         </x-text>
 
-        <x-code lang="sh" whitespace="            ">
-            # You don't need to specify "Controller".
+        <x-code whitespace="            ">
+            # You do not need to specify "Controller".
             # "Login" will be generated as "LoginController"
-            {{config('docs.cli_access')}} make:controller Login
+            '{{config('docs.cli_access')}} make:controller Login'
 
             # Generate a controller with basic CRUD layout
-            {{config('docs.cli_access')}} make:controller Tasks --resource
+            '{{config('docs.cli_access')}} make:controller Tasks --resource'
 
             # Generate a controller for basic CRUD with your model
-            # NOTE: This doesn't generate a model for you.
-            {{config('docs.cli_access')}} make:controller Tasks --resource --model Task
+            # NOTE: This does not generate a model for you.
+            '{{config('docs.cli_access')}} make:controller Tasks --resource --model Task'
         </x-code>
 
 

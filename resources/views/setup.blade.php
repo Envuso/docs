@@ -4,8 +4,17 @@
 
     <x-container>
 
+        <x-header>Setup</x-header>
+        <ul>
+        <x-context>Why build another framework?</x-context>
+        <x-context>Installation</x-context>
+        <x-context>Creating your first project</x-context>
+        <x-context>Configuration</x-context>
+        <x-context>Directory Structure</x-context>
+        </ul>
+
         <x-title>
-            Why build yet another framework...?
+            Why build another framework?
         </x-title>
 
         <x-text>

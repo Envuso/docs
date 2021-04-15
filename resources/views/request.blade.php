@@ -5,11 +5,14 @@
     <x-container>
 
 
-        <x-title>Request</x-title>
+        <x-header>Request</x-header>
+        <ul>
+            <x-context>Accessing the request</x-context>
+        </ul>
 
-        <x-subtitle>
+        <x-title>
            Accessing the request
-        </x-subtitle>
+        </x-title>
         <x-text>
             I was so tired of adding the request/response to the controller method
             and then passing it through my code, it becomes gross, hopefully we agree.
