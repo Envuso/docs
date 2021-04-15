@@ -10,9 +10,9 @@
             <x-context>TBD</x-context>
         </ul>
 
-        <x-Title>
+        <x-title>
             TBD
-        </x-Title>
+        </x-title>
         <x-text>TBD - Coming Soon.</x-text>
 
     </x-container>
