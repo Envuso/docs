@@ -1,11 +1,11 @@
-@extends('layout.app')
+@extends('v1.layout.app')
 
 @section('content')
 
     <x-container>
 
 
-        <x-header>Models</x-header>
+        <x-header>Middleware</x-header>
         <ul>
             <x-context>TBD</x-context>
         </ul>
