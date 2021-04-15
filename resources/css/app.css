@@ -19,7 +19,7 @@
 }
 
 .content {
-    @apply ml-0 sm:ml-64;
+    @apply ml-0 sm:ml-64 w-full;
     overflow-y: auto;
 }
 
