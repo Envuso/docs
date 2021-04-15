@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('v1.layout.app')
 
 @section('content')
     <x-container>

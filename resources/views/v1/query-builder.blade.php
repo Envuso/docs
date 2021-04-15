@@ -1,14 +1,14 @@
-@extends('layout.app')
+@extends('v1.layout.app')
 
 @section('content')
 
     <x-container>
 
-        <x-header>Release Notes</x-header>
+
+        <x-header>Query Builder</x-header>
         <ul>
             <x-context>TBD</x-context>
         </ul>
-
         <x-title>
             TBD
         </x-title>
