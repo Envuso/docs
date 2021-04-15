@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs: 
+  forge-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: deploy to forge
+      uses: fjogeleit/http-request-action@v1.8.0
+      with: 
+        url: ${{ secrets.DEPLOY_URL }}
