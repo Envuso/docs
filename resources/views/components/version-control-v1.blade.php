@@ -8,9 +8,9 @@
             </svg>
         </button>
         <!-- Remove hidden class when dropdown is visible -->
-        <div class="hidden flex rounded-lg shadow-2xl overflow-hidden flex-col items-center ml-4 mt-2 relative w-56 focus:outline-none transition ease-out duration-100" id="dropdown-menu">
+        <div class="hidden flex rounded-lg shadow-2xl overflow-hidden flex-col items-center ml-4 w-56 mt-2 relative focus:outline-none transition ease-out duration-100" id="dropdown-menu">
             <div class="flex flex-col items-center w-full">
-                <a href="{{ url("/1.0/setup") }}" class="px-4 py-2 transition flex flex-row items-center justify-center w-full bg-gray-800 text-white text-sm hover:bg-gray-700 hover:text-purple-400 hover:font-bold">V1.X</a>
+                <a href="{{ url("/1.x/setup") }}" class="px-4 py-2 transition flex flex-row items-center justify-center w-full bg-gray-800 text-white text-sm hover:bg-gray-700 hover:text-purple-400 hover:font-bold">V1.X</a>
              </div>
         </div>
     </div>
