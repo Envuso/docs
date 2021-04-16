@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuIcons = document.getElementsByClassName('hamburger');
     const sideMenu = document.getElementById('sideMenu');
+    var dropdownID = document.getElementsByClassName('dropdown-toggle');
     if (!menuIcons) {
         return;
     }
@@ -15,6 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
         icon.addEventListener('click', toggleMenu);
     });
 
+    Array.from(dropdownID).forEach((element) => {
+        element.addEventListener('click', (event) => {
+            document.getElementById('dropdown-menu').classList.toggle("hidden");
+            document.getElementById('dropdown-menu').classList.toggle("block");
+        });
+    });
 });
 
 function toggleMenu() {

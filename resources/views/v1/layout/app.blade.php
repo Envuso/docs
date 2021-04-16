@@ -26,7 +26,7 @@
         <div id="sideMenu" class="sidebar ">
 
             <x-sidebar-header />
-
+            <x-version-control-v1 />
             <div class="px-6 py-5">
 
                 <x-sidebar-item :route="route('overview.setup')" text="Getting Started" />
@@ -65,8 +65,8 @@
 
     </div>
 
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
     <script src="{{mix('js/app.js')}}"></script>
-
 </body>
 
 </html>
