@@ -6,6 +6,7 @@
         <x-header>Controllers</x-header>
         <ul>
             <x-context>Controllers can be generated</x-context>
+            <x-context>Controller structure</x-context>
         </ul>
 
 
@@ -31,6 +32,21 @@
             '{{config('docs.cli_access')}} make:controller Tasks --resource --model Task'
         </x-code>
 
+
+        <x-title>
+            Controller structure
+        </x-title>
+
+        <x-code whitespace="        ">
+        {{--@formatter:off--}}
+        // All controllers must use the @controller() decorator
+        @controller('/prefix')
+        export class SomethingController extends Controller {
+            // This is all that is needed. Controllers will automatically
+            // be detected on framework boot and bind to the fastify instance.
+        }
+        {{--@formatter:on--}}
+        </x-code>
 
     </x-container>
 @endsection

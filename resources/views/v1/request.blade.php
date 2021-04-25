@@ -20,7 +20,7 @@
 
         <x-code whitespace="        ">
         {{--@formatter:off--}}
-        import { request } from "@Core/Helpers";
+        import { request } from "@envuso/core/Routing";
 
         @put('/user/avatar')
         async uploadAvatar() {
