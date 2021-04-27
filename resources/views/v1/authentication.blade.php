@@ -1,7 +1,19 @@
-@extends('layout.app')
+@extends('v1.layout.app')
 
 @section('content')
     <x-container>
+
+
+        <x-header>Authentication</x-header>
+        <ul>
+            <x-context>Authentication</x-context>
+            <x-context>Here's some of the methods available to you</x-context>
+            <x-context>Login with credentials</x-context>
+            <x-context>Validate login credentials</x-context>
+            <x-context>Check if user is authenticated</x-context>
+            <x-context>Authed User</x-context>
+            <x-context>Obtaining a JWT for an authenticated user</x-context>
+        </ul>
 
         <x-title>Authentication</x-title>
 
@@ -12,16 +24,16 @@
             You can extend or customise parts to your liking.
         </x-text>
 
-        <x-subtitle>
+        <x-title>
             Here's some of the methods available to you
-        </x-subtitle>
+        </x-title>
 
         <br>
         <br>
 
-        <x-subtitle>
+        <x-title>
             Login with credentials
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             You can pass the users credentials to this method to log them in.
@@ -49,9 +61,9 @@
         {{--@formatter:on--}}
         </x-code>
 
-        <x-subtitle>
+        <x-title>
             Validate login credentials
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             You can pass the users email and password(for example) directly from
@@ -77,9 +89,9 @@
 
 
 
-        <x-subtitle>
+        <x-title>
             Check if user is authenticated
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             Check if a user is authenticated for this request
@@ -99,9 +111,9 @@
 
 
 
-        <x-subtitle>
+        <x-title>
             Authed User
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             Returns the authenticated user for this request.
@@ -120,9 +132,9 @@
         </x-code>
 
 
-        <x-subtitle>
+        <x-title>
             Obtaining a JWT for an authenticated user
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             Returns the authenticated user for this request.

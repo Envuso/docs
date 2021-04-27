@@ -1,15 +1,17 @@
-@extends('layout.app')
+@extends('v1.layout.app')
 
 @section('content')
 
     <x-container>
 
+        <x-header>Response</x-header>
+        <ul>
+            <x-context>Accessing the response</x-context>
+        </ul>
 
-        <x-title>Response</x-title>
-
-        <x-subtitle>
+        <x-title>
             Accessing the response
-        </x-subtitle>
+        </x-title>
 
         <x-code whitespace="            ">
             {{--@formatter:off--}}
