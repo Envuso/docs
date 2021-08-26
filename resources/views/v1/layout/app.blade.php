@@ -46,8 +46,9 @@
                 </x-sidebar-item-group>
 
                 <x-sidebar-item-group title="Database">
-                    <x-sidebar-group-item :route="route('overview.models')" text="Models" />
-                    <x-sidebar-group-item :route="route('overview.query-builder')" text="Query builder" />
+                    <x-sidebar-group-item :route="route('overview.db.models')" text="Models" />
+                    <x-sidebar-group-item :route="route('overview.db.query-builder')" text="Query builder" />
+                    <x-sidebar-group-item :route="route('overview.db.seeders')" text="Seeders" />
                 </x-sidebar-item-group>
 
                 <x-sidebar-item-group title="Database">
