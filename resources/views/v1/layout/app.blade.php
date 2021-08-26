@@ -41,6 +41,7 @@
                     <x-sidebar-group-item :route="route('overview.request')" text="Request" />
                     <x-sidebar-group-item :route="route('overview.response')" text="Response" />
                     <x-sidebar-group-item :route="route('overview.controllers')" text="Controllers" />
+                    <x-sidebar-group-item :route="route('overview.data-transfer-objects')" text="Data Transfer Objects" :is-child="true" />
                     <x-sidebar-group-item :route="route('overview.middleware')" text="Middleware" />
                 </x-sidebar-item-group>
 

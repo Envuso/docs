@@ -23,6 +23,7 @@ Route::name('overview.')->group(function () {
         Route::view('/setup', 'v1.setup')->name('setup');
         Route::view('/routes', 'v1.routes')->name('routes');
         Route::view('/controllers', 'v1.controllers')->name('controllers');
+        Route::view('/data-transfer-objects', 'v1.data-transfer-objects')->name('data-transfer-objects');
         Route::view('/middleware', 'v1.middleware')->name('middleware');
         Route::view('/request', 'v1.request')->name('request');
         Route::view('/response', 'v1.response')->name('response');

@@ -143,59 +143,6 @@
         async users(@body body : any) {
             // If you send a request like PUT /user/username, with a body of {username : "sam"}
             // body will be an object of {username : "sam"}
-
-            // For more complex cases, we have data transfer objects, see below
-        }
-        {{--@formatter:on--}}
-        </x-code>
-
-        <x-subtitle>
-            Data Transfer Objects
-        </x-subtitle>
-        <x-text>
-            These will allow you to auto-validate and put the body used
-            in a request to a class so it can be passed around with correct types.
-        </x-text>
-
-
-        <x-code whitespace="        ">
-            {{--@formatter:off--}}
-        import { put, body, DataTransferObject } from "@envuso/core/Routing";
-        import {IsString, Length} from "class-validator";
-
-        class RegistrationDTO extends DataTransferObject {
-
-            // This will validate username is a string and
-            // has a min length of 3 chars, max of 20
-            @IsString()
-            @Length(3, 20)
-            username : string;
-
-            // We deal with this manually later
-            isAdminRequest : boolean = false;
-        }
-
-        @post('/register')
-        async users(@dto() details : RegistrationDTO) {
-            // Details will now be an instance of RegistrationDTO. It will contain all
-            // information from the request and be validated by class-validator package
-
-            // You can also disable validation and do it your self using the below method
-        }
-
-        @post('/register')
-        async users(@dto(false) details : RegistrationDTO) {
-            // Lets say in this case, we don't want to auto validate because
-            // we have a parameter which we want to add to the DTO ourselves
-
-            details.isAdminRequest = true;
-
-            await details.validate()
-
-            // You can use these methods to do something with validation errors
-            details.failed()
-            details.errors()
-
         }
         {{--@formatter:on--}}
         </x-code>

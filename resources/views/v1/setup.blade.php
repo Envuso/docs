@@ -33,7 +33,6 @@
         <x-code whitespace="            ">
             npm install @envuso/cli -g
             yarn global add @envuso/cli
-            npx @envuso/cli
 
             * You can now use "envuso" to create and manage your project
         </x-code>
@@ -54,12 +53,40 @@
 
             You can also clone the framework structure and set up everything yourself
         </div>
+
+
+        <x-title>
+            Using Envuso CLI
+        </x-title>
+
         <x-code whitespace="            ">
+            // Preferred way of creating a project
+            npm install @envuso/cli -g
+            envuso new
+            // You will be taken through a few basic steps
+            > ? Project folder name? EnvusoProject
+            > ? Your project will be created at: /Users/sam/Code/EnvusoProject
+            > Is this okay? (Y/n)
+            ? Which package manager do you wish to use?
+            npm
+            ❯ yarn
+
+            // Your project will now be setup for you :)
+        </x-code>
+
+        <x-title>
+            Doing it yourself
+        </x-title>
+        <x-code whitespace="            ">
+            // You can also do it your self manually
             git clone @envuso/framework my-awesome-project
             cd my-awesome-project
-            //Install deps
-            npm install
             yarn
+            cp example.env .env
+            // Set the APP_KEY in .env file, you can self generate a key and add it to your .env file
+            > node -e 'console.log(require("crypto").randomBytes(16).toString("hex"))'
+
+            // You're all done :)
         </x-code>
 
         <x-title>
