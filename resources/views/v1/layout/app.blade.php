@@ -51,8 +51,20 @@
                     <x-sidebar-group-item :route="route('overview.db.seeders')" text="Seeders" />
                 </x-sidebar-item-group>
 
-                <x-sidebar-item-group title="Database">
-                    <x-sidebar-group-item :route="route('overview.authentication')" text="Authentication" />
+                <x-sidebar-item-group title="Auth">
+                    <x-sidebar-group-item :route="route('overview.auth.authentication')" text="Authentication" />
+                    <x-sidebar-group-item :route="route('overview.auth.policies')" text="Policies/Gates" />
+                </x-sidebar-item-group>
+
+                <x-sidebar-item-group title="Websockets">
+                    <x-sidebar-group-item :route="route('overview.auth.authentication')" text="Server" />
+                    <x-sidebar-group-item :route="route('overview.auth.authentication')" text="Client" />
+                </x-sidebar-item-group>
+
+                <x-sidebar-item-group title="Additional">
+                    <x-sidebar-group-item :route="route('overview.auth.authentication')" text="Cache" />
+                    <x-sidebar-group-item :route="route('overview.auth.authentication')" text="File Storage" />
+                    <x-sidebar-group-item :route="route('overview.auth.authentication')" text="Encryption/Hashing" />
                 </x-sidebar-item-group>
 
                 <x-sidebar-item :route="route('overview.cli')" text="CLI" />

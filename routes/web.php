@@ -27,12 +27,15 @@ Route::name('overview.')->group(function () {
         Route::view('/middleware', 'v1.middleware')->name('middleware');
         Route::view('/request', 'v1.request')->name('request');
         Route::view('/response', 'v1.response')->name('response');
-        Route::view('/authentication', 'v1.authentication')->name('authentication');
         Route::view('/decorators', 'v1.decorators')->name('decorators');
         Route::name('db.')->group(function () {
             Route::view('/models', 'v1.database.models')->name('models');
             Route::view('/query-builder', 'v1.database.query-builder')->name('query-builder');
             Route::view('/seeders', 'v1.database.seeders')->name('seeders');
+        });
+        Route::name('auth.')->group(function () {
+            Route::view('/authentication', 'v1.auth.authentication')->name('authentication');
+            Route::view('/policies', 'v1.auth.policies')->name('policies');
         });
         Route::view('/cli', 'v1.cli')->name('cli');
         Route::view('/introduction', 'v1.introduction')->name('introduction');

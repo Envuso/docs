@@ -45,8 +45,8 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {Auth} from "@Core/Providers";
-        import {User} from "@App/Models/User";
+        import {Auth} from "@envuso/core";
+        import {User} from "Models/User";
 
         await Auth.attempt({
             email : '...',
@@ -74,7 +74,7 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {Auth} from "@Core/Providers";
+        import {Auth} from "@envuso/core";
 
         const canRegister = await Auth.canRegisterAs({
             email : '...',
@@ -99,8 +99,7 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {UnauthorisedException} from "@App/Exceptions/UnauthorisedException";
-        import {Auth} from "@Core/Providers";
+        import {Auth} from "@envuso/core";
 
         if(!Auth.check()) {
             throw new UnauthorisedException();
@@ -123,8 +122,8 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {AuthorisedUser} from "@Core/Providers/Auth";
-        import {Auth} from "@Core/Providers";
+        import {AuthorisedUser} from "@envuso/core";
+        import {Auth} from "@envuso/core";
 
         const user : AuthorisedUser = Auth.user();
 
@@ -144,9 +143,9 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {AuthorisedUser} from "@Core/Providers/Auth";
+        import {AuthorisedUser} from "@envuso/core";
         import {User} from "@App/Models/User";
-        import {Auth} from "@Core/Providers";
+        import {Auth} from "@envuso/core";
 
         let user = await User.find(userId);
 
