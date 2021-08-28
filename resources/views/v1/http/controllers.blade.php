@@ -20,16 +20,18 @@
         </x-text>
 
         <x-code >
-            # You do not need to specify "Controller".
-            # "Login" will be generated as "LoginController"
-            '{{config('docs.cli_access')}} make:controller Login'
+            {{--@formatter:off--}}
+# You do not need to specify "Controller".
+# "Login" will be generated as "LoginController"
+{{config('docs.cli_access')}} make:controller Login
 
-            # Generate a controller with basic CRUD layout
-            '{{config('docs.cli_access')}} make:controller Tasks --resource'
+# Generate a controller with basic CRUD layout
+{{config('docs.cli_access')}} make:controller Tasks --resource
 
-            # Generate a controller for basic CRUD with your model
-            # NOTE: This does not generate a model for you.
-            '{{config('docs.cli_access')}} make:controller Tasks --resource --model Task'
+# Generate a controller for basic CRUD with your model
+# NOTE: This does not generate a model for you.
+{{config('docs.cli_access')}} make:controller Tasks --resource --model Task
+            {{--@formatter:off--}}
         </x-code>
 
 
@@ -39,12 +41,12 @@
 
         <x-code >
         {{--@formatter:off--}}
-        // All controllers must use the @controller() decorator
-        @controller('/prefix')
-        export class SomethingController extends Controller {
-            // This is all that is needed. Controllers will automatically
-            // be detected on framework boot and bind to the fastify instance.
-        }
+// All controllers must use the @controller() decorator
+@controller('/prefix')
+export class SomethingController extends Controller {
+    // This is all that is needed. Controllers will automatically
+    // be detected on framework boot and bind to the fastify instance.
+}
         {{--@formatter:on--}}
         </x-code>
 

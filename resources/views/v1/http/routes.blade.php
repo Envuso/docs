@@ -23,13 +23,13 @@
 
         <x-code >
             {{--@formatter:off--}}
-            @controller('/auth')
-            export class AuthController extends Controller {
+@controller('/auth')
+export class AuthController extends Controller {
 
-                @post('/login')
-                async login() {}
+    @post('/login')
+    async login() {}
 
-            }
+}
             {{--@formatter:on--}}
         </x-code>
 
@@ -49,17 +49,18 @@
         <div class="flex flex-col">
 
             <x-code>
-                @get('/auth')
-                @post('/auth')
-                @put('/auth')
-                @patch('/auth')
-                //Delete is a tricky one... We wanted lowercase naming
-                //on decorators, "delete" in ts/js is a reserved word
-                //Pick your poison...
-                @destroy('/auth')
-                @remove('/auth')
-                @delete_('/auth')
-
+                {{--@formatter:off--}}
+@get('/auth')
+@post('/auth')
+@put('/auth')
+@patch('/auth')
+//Delete is a tricky one... We wanted lowercase naming
+//on decorators, "delete" in ts/js is a reserved word
+//Pick your poison...
+@destroy('/auth')
+@remove('/auth')
+@delete_('/auth')
+                {{--@formatter:on--}}
             </x-code>
 
         </div>
@@ -75,12 +76,12 @@
 
         <x-code >
             {{--@formatter:off--}}
-        import { request } from "@envuso/core/Routing";
+import { request } from "@envuso/core/Routing";
 
-        @put('/user/avatar')
-        async uploadAvatar() {
-            const file = request().file('avatar')
-        }
+@put('/user/avatar')
+async uploadAvatar() {
+    const file = request().file('avatar')
+}
         {{--@formatter:on--}}
         </x-code>
 
@@ -96,25 +97,22 @@
 
         <x-code >
             {{--@formatter:off--}}
+response().badRequest('Something went wrong');
+response().notFound('Woopsie, 404');
+response().redirect('https://google.com');
+response().json({hello : 'world'});
+response().validationFailure({email : 'Invalid email.'});
+response().header('Location', 'https://google.com');
+response().setResponse(
+    { message : 'Oh no!'},
+    StatusCodes.INTERNAL_SERVER_ERROR
+).send();
 
+// or... from a controller method
 
-        response().badRequest('Something went wrong');
-        response().notFound('Woopsie, 404');
-        response().redirect('https://google.com');
-        response().json({hello : 'world'});
-        response().validationFailure({email : 'Invalid email.'});
-        response().header('Location', 'https://google.com');
-        response().setResponse(
-            { message : 'Oh no!'},
-            StatusCodes.INTERNAL_SERVER_ERROR
-        ).send();
-
-        // or... from a controller method
-
-        return {
-            hello : 'world!'
-        };
-
+return {
+    hello : 'world!'
+};
         {{--@formatter:on--}}
         </x-code>
 
@@ -137,13 +135,13 @@
 
         <x-code >
             {{--@formatter:off--}}
-        import { put, body } from "@envuso/core/Routing";
+import { put, body } from "@envuso/core/Routing";
 
-        @put('/user/username')
-        async users(@body body : any) {
-            // If you send a request like PUT /user/username, with a body of {username : "sam"}
-            // body will be an object of {username : "sam"}
-        }
+@put('/user/username')
+async users(@body body : any) {
+    // If you send a request like PUT /user/username, with a body of {username : "sam"}
+    // body will be an object of {username : "sam"}
+}
         {{--@formatter:on--}}
         </x-code>
 
@@ -153,14 +151,14 @@
 
         <x-code >
             {{--@formatter:off--}}
-        import { get, query, request } from "@envuso/core/Routing";
+import { get, query, request } from "@envuso/core/Routing";
 
-        @get('/users')
-        async users(@query page : number) {
-            // If you send a request like /users?page=10
-            // page will be converted to a number and read the parameter based
-            // on the variable name
-        }
+@get('/users')
+async users(@query page : number) {
+    // If you send a request like /users?page=10
+    // page will be converted to a number and read the parameter based
+    // on the variable name
+}
         {{--@formatter:on--}}
         </x-code>
 
@@ -170,13 +168,13 @@
 
         <x-code >
             {{--@formatter:off--}}
-        import { get, param, request } from "@envuso/core/Routing";
+import { get, param, request } from "@envuso/core/Routing";
 
-        @get('/users/:type')
-        async users(@param type : string) {
-            // If you send a request like /users/admin
-            // type will contain the content from the route parameter
-        }
+@get('/users/:type')
+async users(@param type : string) {
+    // If you send a request like /users/admin
+    // type will contain the content from the route parameter
+}
         {{--@formatter:on--}}
         </x-code>
 

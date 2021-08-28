@@ -17,12 +17,12 @@
 
         <x-code >
         {{--@formatter:off--}}
-        // we use new Middleware() so that you can define any additional middleware data
-        @middleware(new UserHasRoleMiddleware('admin'))
-        @controller('/prefix')
-        export class SomethingController extends Controller {
+// we use new Middleware() so that you can define any additional middleware data
+@middleware(new UserHasRoleMiddleware('admin'))
+@controller('/prefix')
+export class SomethingController extends Controller {
 
-        }
+}
         {{--@formatter:on--}}
         </x-code>
 
@@ -32,16 +32,16 @@
 
         <x-code >
         {{--@formatter:off--}}
-        @controller('/prefix')
-        export class SomethingController extends Controller {
+@controller('/prefix')
+export class SomethingController extends Controller {
 
-            @middleware(new UserIsAdminMiddleware())
-            @get('/admin')
-            async adminAction() {
+    @middleware(new UserIsAdminMiddleware())
+    @get('/admin')
+    async adminAction() {
 
-            }
+    }
 
-        }
+}
         {{--@formatter:on--}}
         </x-code>
 

@@ -20,12 +20,12 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import { request } from "@envuso/core/Routing";
+import { request } from "@envuso/core/Routing";
 
-        @put('/user/avatar')
-        async uploadAvatar() {
-            const file = request().file('avatar')
-        }
+@put('/user/avatar')
+async uploadAvatar() {
+    const file = request().file('avatar')
+}
         {{--@formatter:on--}}
         </x-code>
 
