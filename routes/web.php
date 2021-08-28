@@ -37,6 +37,10 @@ Route::name('overview.')->group(function () {
             Route::view('/authentication', 'v1.auth.authentication')->name('authentication');
             Route::view('/policies', 'v1.auth.policies')->name('policies');
         });
+        Route::name('websockets.')->group(function () {
+            Route::view('/server', 'v1.websockets.server')->name('server');
+            Route::view('/client', 'v1.websockets.client')->name('client');
+        });
         Route::view('/cli', 'v1.cli')->name('cli');
         Route::view('/introduction', 'v1.introduction')->name('introduction');
 

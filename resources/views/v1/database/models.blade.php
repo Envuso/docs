@@ -27,7 +27,7 @@
 
         <x-context-sub-title>Using the cli tool</x-context-sub-title>
 
-        <x-code lang="sh" whitespace="">
+        <x-code lang="sh" >
             {{--@formatter:off--}}
 envuso make:model Post
 # This will generate a model for you at /src/Models/PostModel.ts
@@ -39,7 +39,7 @@ envuso make:model Blog/Post
         </x-code>
 
         <x-context-sub-title>Manually creating</x-context-sub-title>
-        <x-code whitespace="">
+        <x-code >
             {{--@formatter:off--}}
 > touch /src/Models/PostModel.ts
 
@@ -62,7 +62,7 @@ export class PostModel extends Model&lt;PostModel&gt; {
         <x-text>
             All properties on a model will be saved into the database. There is a few more sweet things that come with envuso's models though.
         </x-text>
-        <x-code whitespace="">{{--@formatter:off--}}
+        <x-code >{{--@formatter:off--}}
 export class PostModel extends Model&lt;PostModel&gt; {
 
     @id
@@ -106,7 +106,7 @@ export class PostPhotoInformation {
         </x-text>
 
         <x-context-sub-title>Create</x-context-sub-title>
-        <x-code whitespace="">{{--@formatter:off--}}
+        <x-code >{{--@formatter:off--}}
 await PostModel.create({
     title : 'Cool programming post',
     content : 'Woot'
@@ -120,7 +120,7 @@ await post.save();
 
         <x-context-sub-title>Read</x-context-sub-title>
         {{--@formatter:off--}}
-<x-code whitespace="">
+<x-code >
 await PostModel
     .where({title:'Cool programming post'})
     .first();
@@ -137,7 +137,7 @@ await PostModel.find('Cool programming post', 'title');
 
         <x-context-sub-title>Update</x-context-sub-title>
         {{--@formatter:off--}}
-        <x-code whitespace="">
+        <x-code >
 const post = await PostModel.find('1238712837');
 post.title = 'My newly updated title';
 await post.save();
@@ -153,7 +153,7 @@ await post.update({title: 'My newly updated title'});
 
         <x-context-sub-title>Delete</x-context-sub-title>
         {{--@formatter:off--}}
-        <x-code whitespace="">
+        <x-code >
 const post = await PostModel.find('1238712837');
 await post.delete();
 

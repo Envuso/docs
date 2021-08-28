@@ -19,7 +19,7 @@
             Here's what available:
         </x-text>
 
-        <x-code whitespace="            ">
+        <x-code >
             # You do not need to specify "Controller".
             # "Login" will be generated as "LoginController"
             '{{config('docs.cli_access')}} make:controller Login'
@@ -37,7 +37,7 @@
             Controller structure
         </x-title>
 
-        <x-code whitespace="        ">
+        <x-code >
         {{--@formatter:off--}}
         // All controllers must use the @controller() decorator
         @controller('/prefix')

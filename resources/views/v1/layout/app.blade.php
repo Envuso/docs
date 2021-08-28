@@ -57,8 +57,8 @@
                 </x-sidebar-item-group>
 
                 <x-sidebar-item-group title="Websockets">
-                    <x-sidebar-group-item :route="route('overview.auth.authentication')" text="Server" />
-                    <x-sidebar-group-item :route="route('overview.auth.authentication')" text="Client" />
+                    <x-sidebar-group-item :route="route('overview.websockets.server')" text="Server" />
+                    <x-sidebar-group-item :route="route('overview.websockets.client')" text="Client" />
                 </x-sidebar-item-group>
 
                 <x-sidebar-item-group title="Additional">

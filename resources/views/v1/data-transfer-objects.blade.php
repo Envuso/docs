@@ -30,7 +30,7 @@
         </x-text>
 
 
-        <x-code whitespace="        ">
+        <x-code >
             {{--@formatter:off--}}
         import {put, body, DataTransferObject } from "@envuso/core/Routing";
         import {IsString, Length, MaxLength} from "class-validator";

@@ -28,7 +28,7 @@
             create a new ts file, for example. CategoriesSeeder.ts.
         </x-text>
 
-        <x-code whitespace="">
+        <x-code >
             {{--@formatter:off--}}
 import {Seeder} from "@envuso/core/Database";
 import {Category} from "../App/Models/Category";
@@ -60,7 +60,7 @@ export class CategoriesSeeder extends Seeder {
             Now that we've created a seeder, we need to let Envuso know about it, lets head into
             <x-inline-code>/src/Seeders/Seeders.ts</x-inline-code>
         </x-text>
-        <x-code whitespace="">
+        <x-code >
             {{--@formatter:off--}}
 import {DatabaseSeeder} from "@envuso/core/Database";
 import {CategoriesSeeder} from "./CategoriesSeeder";

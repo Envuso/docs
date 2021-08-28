@@ -15,7 +15,7 @@
             Using middleware on all controller methods
         </x-title>
 
-        <x-code whitespace="        ">
+        <x-code >
         {{--@formatter:off--}}
         // we use new Middleware() so that you can define any additional middleware data
         @middleware(new UserHasRoleMiddleware('admin'))
@@ -30,7 +30,7 @@
             Using middleware on one method
         </x-title>
 
-        <x-code whitespace="        ">
+        <x-code >
         {{--@formatter:off--}}
         @controller('/prefix')
         export class SomethingController extends Controller {
@@ -50,7 +50,7 @@
             Middleware Structure
         </x-title>
 
-        <x-code whitespace="">
+        <x-code >
         {{--@formatter:off--}}
 import {Middleware, RequestContext} from "@envuso/core/Routing";
 

@@ -19,6 +19,19 @@ mix.js("resources/js/app.js", "public/js")
     .bladeReload()
     .disableNotifications();
 
-if(mix.inProduction()) {
+mix.babelConfig({
+    plugins : [
+        [
+            "prismjs", {
+            "languages" : ["json", "shell", "typescript", "javascript"],
+            "plugins"   : ["line-numbers", "line-highlight", "autolinker", "show-language", "copy-to-clipboard", "normalize-whitespace"],
+            "theme"     : "material-oceanic",
+            "css"       : true
+        }
+        ]
+    ]
+});
+
+if (mix.inProduction()) {
     mix.version();
 }

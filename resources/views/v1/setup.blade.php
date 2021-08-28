@@ -30,7 +30,7 @@
             Installation
         </x-title>
 
-        <x-code whitespace="            ">
+        <x-code >
             npm install @envuso/cli -g
             yarn global add @envuso/cli
 
@@ -44,7 +44,7 @@
         <div class="text">
             If you have installed the CLI tool from above, you can now generate your
             project by running
-            <x-code :inline="true">envuso new</x-code>
+            <x-inline-code>envuso new</x-inline-code>
             and following
             the steps, it should take less than 30 seconds.
 
@@ -59,7 +59,7 @@
             Using Envuso CLI
         </x-title>
 
-        <x-code whitespace="            ">
+        <x-code >
             // Preferred way of creating a project
             npm install @envuso/cli -g
             envuso new
@@ -77,7 +77,7 @@
         <x-title>
             Doing it yourself
         </x-title>
-        <x-code whitespace="            ">
+        <x-code >
             // You can also do it your self manually
             git clone @envuso/framework my-awesome-project
             cd my-awesome-project
@@ -97,7 +97,7 @@
             <br>
             There will be an <strong>example.env</strong> file, which you can copy
             and rename to <strong>.env</strong> you can use
-            <x-code :inline="true">cp example.env .env</x-code>
+            <x-inline-code>cp example.env .env</x-inline-code>
             <br>
             <br>
             You may need to change the following values:

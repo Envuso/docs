@@ -21,7 +21,7 @@
         </x-text>
 
 
-        <x-code whitespace="            ">
+        <x-code >
             {{--@formatter:off--}}
             @controller('/auth')
             export class AuthController extends Controller {
@@ -35,11 +35,11 @@
 
         <div class="text">
             With AuthController, we define
-            <x-code :inline="true">@controller('/auth')</x-code>
+            <x-inline-code>@controller('/auth')</x-inline-code>
             <strong>/auth</strong> is this controllers prefix.
             <br>
             We then define
-            <x-code :inline="true">@post('/login')</x-code>
+            <x-inline-code>@post('/login')</x-inline-code>
             this makes this controller method available
             by sending a POST request to <strong>/auth/login</strong>
         </div>
@@ -73,7 +73,7 @@
             and then passing it through my code, it becomes gross, hopefully we agree.
         </x-text>
 
-        <x-code whitespace="        ">
+        <x-code >
             {{--@formatter:off--}}
         import { request } from "@envuso/core/Routing";
 
@@ -87,14 +87,14 @@
         <div class="text">
             At the moment it's fairly basic, but you can access the underlying
             fastify request with
-            <x-code :inline="true">request().fastifyRequest</x-code>
+            <x-inline-code>request().fastifyRequest</x-inline-code>
         </div>
 
         <x-title>
             Accessing the response
         </x-title>
 
-        <x-code whitespace="        ">
+        <x-code >
             {{--@formatter:off--}}
 
 
@@ -120,7 +120,7 @@
 
         <div class="text">
             And again, the same applies with response, the underlying fastify reply can be accessed via
-            <x-code :inline="true">response().fastifyReply</x-code>
+            <x-inline-code>response().fastifyReply</x-inline-code>
         </div>
 
 
@@ -135,7 +135,7 @@
             Accessing the request body
         </x-subtitle>
 
-        <x-code whitespace="        ">
+        <x-code >
             {{--@formatter:off--}}
         import { put, body } from "@envuso/core/Routing";
 
@@ -151,7 +151,7 @@
             Accessing a query parameter
         </x-subtitle>
 
-        <x-code whitespace="        ">
+        <x-code >
             {{--@formatter:off--}}
         import { get, query, request } from "@envuso/core/Routing";
 
@@ -168,7 +168,7 @@
             Using route parameters
         </x-subtitle>
 
-        <x-code whitespace="        ">
+        <x-code >
             {{--@formatter:off--}}
         import { get, param, request } from "@envuso/core/Routing";
 

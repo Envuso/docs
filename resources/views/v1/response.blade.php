@@ -13,7 +13,7 @@
             Accessing the response
         </x-title>
 
-        <x-code whitespace="            ">
+        <x-code >
             {{--@formatter:off--}}
 
 
@@ -39,7 +39,7 @@
 
         <div class="text">
             And again, the same applies with response, the underlying fastify reply can be accessed via
-            <x-code :inline="true">response().fastifyReply</x-code>
+            <x-inline-code>response().fastifyReply</x-inline-code>
         </div>
 
     </x-container>

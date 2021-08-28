@@ -32,7 +32,7 @@
             Let's imagine we need a policy to manage whether a user can manage blog posts.
         </x-text>
 
-        <x-code :whitespace="''">
+        <x-code>
 {{--@formatter:off--}}
 import {Authenticatable} from "@envuso/core/Common";
 import {User} from "../Models/User";
@@ -60,7 +60,7 @@ export class PostPolicy {
             This will tell the framework that x policy is designated to x model.
         </x-text>
 
-        <x-code whitespace="">
+        <x-code >
 {{--@formatter:off--}}
 import {PostPolicy} from '../Policies/PostPolicy'
 import {Model, policy} from "@envuso/core/Database";
@@ -80,7 +80,7 @@ export class BlogPost extends Model&lt;BlogPost&gt; {
             We can use them from controller methods:
         </x-context-sub-title>
 
-        <x-code whitespace="">
+        <x-code >
 {{--@formatter:off--}}
 // We have to pass our model class to the can method so it knows which policy we're trying to use.
 await this.can('create', BlogPost);
@@ -98,7 +98,7 @@ this.cannot('create', BlogPost);
             With an authed user instance:
         </x-context-sub-title>
 
-        <x-code whitespace="">
+        <x-code >
 {{--@formatter:off--}}
 const user = Auth.user();
 

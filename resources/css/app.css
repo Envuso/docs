@@ -61,12 +61,12 @@
 }
 
 .regular .hljs {
-    max-height: 700px;
-    overflow-y: auto;
+    /*max-height: 700px;*/
+    /*overflow-y: auto;*/
     white-space: pre;
     font-family: 'Fira Code', monospace !important;
-    line-height: 2rem;
+    line-height: 1.5rem;
     @apply my-6 rounded-xl shadow-lg p-8;
-    /*font-size: 1.05rem;*/
+    font-size: 0.9rem;
 }
 
