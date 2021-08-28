@@ -282,7 +282,7 @@ this.broadcast(&#39;global-chat&#39;, &#39;message&#39;, {message: 'some message
             <br>
             <br>
             Subscriptions are documented on the
-            <x-page-link :route="route('overview.websockets.client')" text="Websockets Client documentation" />
+            <x-page-link :route="route('websockets.client')" text="Websockets Client documentation" />
         </x-text>
         <x-code>
             {{--@formatter:off--}}

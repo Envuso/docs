@@ -21,7 +21,7 @@
         <x-title>Creating a model</x-title>
         <x-text>
             You can do it manually, or use the
-            <x-page-link :route="route('overview.cli')">CLI tool</x-page-link>
+            <x-page-link :route="route('cli')">CLI tool</x-page-link>
         </x-text>
 
 
