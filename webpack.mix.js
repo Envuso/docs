@@ -25,7 +25,7 @@ mix.babelConfig({
             "prismjs", {
             "languages" : ["json", "shell", "typescript", "javascript"],
             "plugins"   : ["line-numbers", "line-highlight", "autolinker", "show-language", "copy-to-clipboard", "normalize-whitespace"],
-            "theme"     : "resources/css/prism-themes/material-oceanic",
+            "theme"     : "./prism/themes/prism-material-oceanic.css",
             "css"       : true
         }
         ]

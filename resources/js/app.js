@@ -15,7 +15,6 @@ require('./sidemenu');
 //hljs.highlightAll();
 
 import Prism from 'prismjs';
-import './../css/prism-themes/prism-material-oceanic.css';
 
 
 Prism.manual = true;
