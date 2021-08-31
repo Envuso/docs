@@ -9,6 +9,10 @@ class SidebarGroupItem extends Component
     public $route;
     public $text;
     public $isActive = false;
+    /**
+     * @var false
+     */
+    public bool $isChild = false;
 
     /**
      * Create a new component instance.
@@ -16,10 +20,11 @@ class SidebarGroupItem extends Component
      * @param $route
      * @param $text
      */
-    public function __construct($route, $text)
+    public function __construct($route, $text, $isChild = false)
     {
         $this->route = $route;
         $this->text  = $text;
+        $this->isChild = $isChild;
 
         if (request()->fullUrlIs($route)) {
             $this->isActive = true;

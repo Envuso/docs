@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('v1.layout.app')
 
 @section('content')
 
@@ -23,7 +23,7 @@
         Installation
     </x-title>
 
-    <x-code lang="sh" whitespace="            ">
+    <x-code lang="sh" >
         npm install @envuso/framework
         yarn add @envuso/framework
     </x-code>

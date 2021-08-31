@@ -1,7 +1,19 @@
-@extends('layout.app')
+@extends('v1.layout.app')
 
 @section('content')
     <x-container>
+
+
+        <x-header>Authentication</x-header>
+        <ul>
+            <x-context>Authentication</x-context>
+            <x-context>Here's some of the methods available to you</x-context>
+            <x-context>Login with credentials</x-context>
+            <x-context>Validate login credentials</x-context>
+            <x-context>Check if user is authenticated</x-context>
+            <x-context>Authed User</x-context>
+            <x-context>Obtaining a JWT for an authenticated user</x-context>
+        </ul>
 
         <x-title>Authentication</x-title>
 
@@ -12,16 +24,16 @@
             You can extend or customise parts to your liking.
         </x-text>
 
-        <x-subtitle>
+        <x-title>
             Here's some of the methods available to you
-        </x-subtitle>
+        </x-title>
 
         <br>
         <br>
 
-        <x-subtitle>
+        <x-title>
             Login with credentials
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             You can pass the users credentials to this method to log them in.
@@ -33,8 +45,8 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {Auth} from "@Core/Providers";
-        import {User} from "@App/Models/User";
+        import {Auth} from "@envuso/core";
+        import {User} from "Models/User";
 
         await Auth.attempt({
             email : '...',
@@ -49,9 +61,9 @@
         {{--@formatter:on--}}
         </x-code>
 
-        <x-subtitle>
+        <x-title>
             Validate login credentials
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             You can pass the users email and password(for example) directly from
@@ -62,7 +74,7 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {Auth} from "@Core/Providers";
+        import {Auth} from "@envuso/core";
 
         const canRegister = await Auth.canRegisterAs({
             email : '...',
@@ -77,9 +89,9 @@
 
 
 
-        <x-subtitle>
+        <x-title>
             Check if user is authenticated
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             Check if a user is authenticated for this request
@@ -87,8 +99,7 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {UnauthorisedException} from "@App/Exceptions/UnauthorisedException";
-        import {Auth} from "@Core/Providers";
+        import {Auth} from "@envuso/core";
 
         if(!Auth.check()) {
             throw new UnauthorisedException();
@@ -99,9 +110,9 @@
 
 
 
-        <x-subtitle>
+        <x-title>
             Authed User
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             Returns the authenticated user for this request.
@@ -111,8 +122,8 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {AuthorisedUser} from "@Core/Providers/Auth";
-        import {Auth} from "@Core/Providers";
+        import {AuthorisedUser} from "@envuso/core";
+        import {Auth} from "@envuso/core";
 
         const user : AuthorisedUser = Auth.user();
 
@@ -120,9 +131,9 @@
         </x-code>
 
 
-        <x-subtitle>
+        <x-title>
             Obtaining a JWT for an authenticated user
-        </x-subtitle>
+        </x-title>
 
         <x-text>
             Returns the authenticated user for this request.
@@ -132,9 +143,9 @@
 
         <x-code>
         {{--@formatter:off--}}
-        import {AuthorisedUser} from "@Core/Providers/Auth";
+        import {AuthorisedUser} from "@envuso/core";
         import {User} from "@App/Models/User";
-        import {Auth} from "@Core/Providers";
+        import {Auth} from "@envuso/core";
 
         let user = await User.find(userId);
 

@@ -16,4 +16,22 @@ mix.js("resources/js/app.js", "public/js")
     .postCss("resources/css/app.css", "public/css", [
         require("tailwindcss"),
     ])
-    .bladeReload();
+    .bladeReload()
+    .disableNotifications();
+
+mix.babelConfig({
+    plugins : [
+        [
+            "prismjs", {
+            "languages" : ["json", "shell", "typescript", "javascript"],
+            "plugins"   : ["line-numbers", "line-highlight", "autolinker", "show-language", "copy-to-clipboard", "normalize-whitespace"],
+            "theme"     : "./prism/themes/prism-material-oceanic.css",
+            "css"       : true
+        }
+        ]
+    ]
+});
+
+if (mix.inProduction()) {
+    mix.version();
+}

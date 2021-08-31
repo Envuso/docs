@@ -11,11 +11,13 @@
     },
     "devDependencies": {
         "axios": "^0.21",
+        "babel-plugin-prismjs": "^2.1.0",
         "highlight.js": "^10.5.0",
         "highlightjs-line-numbers.js": "^2.8.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.2.9"
+        "postcss": "^8.2.9",
+        "prismjs": "^1.24.1"
     },
     "dependencies": {
         "autoprefixer": "^10.2.5",
