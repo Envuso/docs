@@ -1,4 +1,4 @@
-<div class="fixed pin-t pin-x z-40">
+<div style="display: none;">
     <div class="bg-gradient-primary text-white h-1"></div>
 
     <nav class="flex items-center justify-between text-black bg-navbar shadow-xs h-16">
