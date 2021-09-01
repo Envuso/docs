@@ -16,6 +16,7 @@ yarn global add @envuso/cli
 # You can now use "envuso" to create and manage your project
 ```
 
+
 ## Creating your first project
 
 If you have installed the CLI tool from above, you can now generate your project by running `envuso  new` and following the steps, it should take less than 30 seconds.

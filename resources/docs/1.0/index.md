@@ -1,4 +1,4 @@
-- [Get Started](/{{route}}/{{version}}/setup)
+- #[Get Started](/{{route}}/{{version}}/setup)
 - ##Prologue
     - [Release Notes](/{{route}}/{{version}}/release-notes)
     - [Contribute](/{{route}}/{{version}}/contribute)
@@ -25,5 +25,5 @@
     - [Data Tranfer Objects](/{{route}}/{{version}}/data-transfer-objects)
     
 
-- [CLI](/{{route}}/{{version}}/cli)
-- [Decorators](/{{route}}/{{version}}/decorators)
+- #[CLI](/{{route}}/{{version}}/cli)
+- #[Decorators](/{{route}}/{{version}}/decorators)

@@ -31,5 +31,3 @@ Prism.plugins.NormalizeWhitespace.setDefaults({
     'spaces-to-tabs'           : 4
 });
 Prism.highlightAll();
-
-

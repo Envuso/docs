@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 
+@import './../css/prism-material-oceanic.css';
+
 .body-wrapper {
     @apply flex overflow-hidden h-screen relative;
 }
