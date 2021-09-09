@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <x-container>
+    {{--<x-container>
         {{ Illuminate\Mail\Markdown::parse(file_get_contents(base_path() . '\resources\docs\2.0\storage.md')) }}
-    </x-container>
+    </x-container>--}}
 
 
 

@@ -75,6 +75,10 @@
 
     <div class="content">
         @yield('content')
+
+        <x-container>
+            {{\App\Services\MarkdownView::parse($view_name)}}
+        </x-container>
     </div>
 
 </div>
