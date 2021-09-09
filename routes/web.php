@@ -12,48 +12,53 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::redirect('/', '/v2/setup')->name('landing');
 
-Route::redirect('/', '/1.x/setup')->name('landing');
+$version = [
+    'v1', 'v2'
+];
 
-Route::prefix('1.x')->group(function () {
-    Route::view('/release-notes', 'v1.release-notes')->name('release-notes');
-    Route::view('/contribute', 'v1.contribute')->name('contribute');
-    Route::view('/setup', 'v1.setup')->name('setup');
+foreach ($version as $versions) {
+    Route::prefix($versions)->group(function () use ($versions) {
+        Route::view('/release-notes', $versions.'.release-notes')->name($versions.'.release-notes');
+        Route::view('/contribute', $versions.'.contribute')->name($versions.'.contribute');
+        Route::view('/setup', $versions.'.setup')->name($versions.'.setup');
 
-    Route::view('/decorators', 'v1.decorators')->name('decorators');
+        Route::view('/decorators', $versions.'.decorators')->name($versions.'.decorators');
 
-    Route::name('http.')->group(function () {
-        Route::view('/routes', 'v1.http.routes')->name('routes');
-        Route::view('/request', 'v1.http.request')->name('request');
-        Route::view('/response', 'v1.http.response')->name('response');
-        Route::view('/controllers', 'v1.http.controllers')->name('controllers');
-        Route::view('/middleware', 'v1.http.middleware')->name('middleware');
+        Route::name('http.')->group(function () use ($versions) {
+            Route::view('/routes', $versions.'.http.routes')->name($versions.'.routes');
+            Route::view('/request', $versions.'.http.request')->name($versions.'.request');
+            Route::view('/response', $versions.'.http.response')->name($versions.'.response');
+            Route::view('/controllers', $versions.'.http.controllers')->name($versions.'.controllers');
+            Route::view('/middleware', $versions.'.http.middleware')->name($versions.'.middleware');
+        });
+
+        Route::name('db.')->group(function () use ($versions) {
+            Route::view('/models', $versions.'.database.models')->name($versions.'.models');
+            Route::view('/query-builder', $versions.'.database.query-builder')->name($versions.'.query-builder');
+            Route::view('/seeders', $versions.'.database.seeders')->name($versions.'.seeders');
+        });
+
+        Route::name('auth.')->group(function () use ($versions) {
+            Route::view('/authentication', $versions.'.auth.authentication')->name($versions.'.authentication');
+            Route::view('/policies', $versions.'.auth.policies')->name($versions.'.policies');
+        });
+        Route::name('websockets.')->group(function () use ($versions) {
+            Route::view('/server', $versions.'.websockets.server')->name($versions.'.server');
+            Route::view('/client', $versions.'.websockets.client')->name($versions.'.client');
+        });
+
+        Route::name('additional.')->group(function () use ($versions) {
+            Route::view('/cache', $versions.'.additional.cache')->name($versions.'.cache');
+            Route::view('/storage', $versions.'.additional.storage')->name($versions.'.storage');
+            Route::view('/encryption-hashing', $versions.'.additional.encryption-hashing')->name($versions.'.encryption-hashing');
+            Route::view('/data-transfer-objects', $versions.'.additional.data-transfer-objects')->name($versions.'.data-transfer-objects');
+        });
+
+        Route::view('/cli', $versions.'.cli')->name($versions.'.cli');
+        Route::view('/introduction', $versions.'.introduction')->name($versions.'.introduction');
+
     });
-
-    Route::name('db.')->group(function () {
-        Route::view('/models', 'v1.database.models')->name('models');
-        Route::view('/query-builder', 'v1.database.query-builder')->name('query-builder');
-        Route::view('/seeders', 'v1.database.seeders')->name('seeders');
-    });
-
-    Route::name('auth.')->group(function () {
-        Route::view('/authentication', 'v1.auth.authentication')->name('authentication');
-        Route::view('/policies', 'v1.auth.policies')->name('policies');
-    });
-    Route::name('websockets.')->group(function () {
-        Route::view('/server', 'v1.websockets.server')->name('server');
-        Route::view('/client', 'v1.websockets.client')->name('client');
-    });
-
-    Route::name('additional.')->group(function () {
-        Route::view('/cache', 'v1.additional.cache')->name('cache');
-        Route::view('/storage', 'v1.additional.storage')->name('storage');
-        Route::view('/encryption-hashing', 'v1.additional.encryption-hashing')->name('encryption-hashing');
-        Route::view('/data-transfer-objects', 'v1.additional.data-transfer-objects')->name('data-transfer-objects');
-    });
-
-    Route::view('/cli', 'v1.cli')->name('cli');
-    Route::view('/introduction', 'v1.introduction')->name('introduction');
-
-});
+}
 

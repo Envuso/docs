@@ -3,17 +3,7 @@
 @section('content')
 
     <x-container>
-
-
-        <x-header>Contribute</x-header>
-        <ul>
-            <x-context>TBD</x-context>
-        </ul>
-        <x-title>
-            TBD
-        </x-title>
-        <x-text>TBD - Coming Soon.</x-text>
-
+        {{ Illuminate\Mail\Markdown::parse(file_get_contents(base_path() . '\resources\docs\1.0\contribute.md')) }}
     </x-container>
 
 

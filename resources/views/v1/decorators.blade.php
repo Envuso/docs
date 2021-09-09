@@ -3,18 +3,7 @@
 @section('content')
 
     <x-container>
-
-
-        <x-header>Decotrators</x-header>
-        <ul>
-            <x-context>TBD</x-context>
-        </ul>
-
-        <x-title>
-            TBD
-        </x-title>
-        <x-text>TBD - Coming Soon.</x-text>
-
+        {{ Illuminate\Mail\Markdown::parse(file_get_contents(base_path() . '\resources\docs\1.0\decorators.md')) }}
     </x-container>
 
 

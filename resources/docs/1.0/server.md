@@ -1,10 +1,18 @@
+<a href="https://envuso.com/"><div class="text-center py-4 lg:px-4">
+  <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+    <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+    <span class="font-semibold mr-2 text-left flex-auto">Envuso v2.X has been release!</span>
+    <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+  </div>
+</div></a>
+
 # Websocket Server
 
 More info needed here.
 
 
 ## Configuration
-Websockets configuration file can be found at  `/src/Config/Websockets.ts`
+Websockets configuration file can be found at  <code class="language-typescript">/src/Config/Websockets.ts</code>
 
 ```typescript
 {
@@ -38,9 +46,9 @@ In these channels, we can send events, for example with "global-chat", when a us
 
 The server will receive this message then broadcast it to all users again via the "message" event again.
 ## Channels/Listeners
-When the framework boots, it will check inside `/src/App/Http/Sockets` for instances of:  
-`@envuso/core/Sockets/SocketChannelListener`  
-`@envuso/core/Sockets/SocketListener`
+When the framework boots, it will check inside <code class="language-typescript">/src/App/Http/Sockets</code> for instances of:  
+<code class="language-typescript">@envuso/core/Sockets/SocketChannelListener</code><br>
+<code class="language-typescript">@envuso/core/Sockets/SocketListener</code>
 ### Socket Listener
 SocketListener is the simplest type of a socket handler.  
 It's abstract class looks like this:
@@ -125,7 +133,7 @@ export abstract class SocketChannelListener {
 }
 ```
 ## Creating a channel
-Let's create a channel for our global chat, in  `/src/App/Http/Sockets/`  we'll create a class called  `GlobalChatSocketChannel`
+Let's create a channel for our global chat, in  <code class="language-typescript">/src/App/Http/Sockets/</code>  we'll create a class called  <code class="language-typescript">GlobalChatSocketChannel</code>
 
 ```typescript
 import {injectable} from "@envuso/core/AppContainer";
@@ -198,7 +206,7 @@ this.broadcast('global-chat', 'message', {message: 'some message'});
 
 We need to pass the reference to our "GlobalChatSocketChannel", so that it can find all users who have "subscriptions" to this channel.
 
-Subscriptions are documented on the  [Websockets Client documentation](https://envuso.com/1.x/client)
+Subscriptions are documented on the  [Websockets Client documentation](https://envuso.com/v1/client)
 
 ```typescript
 resolve(SocketServer).broadcast(

@@ -53,6 +53,30 @@
     font-family: 'Fira Code', monospace !important;
 }
 
+a{
+    @apply tracking-wide py-1.5 text-purple-400 hover:text-purple-200 transition;
+}
+
+h1 {
+    @apply text-gray-100 font-bold tracking-wide text-3xl leading-loose mb-6 mt-10 md:mt-8 lg:mt-8;
+}
+
+h2 {
+    @apply text-purple-400 hover:text-purple-300 hover:underline font-semibold tracking-wide text-3xl leading-loose mb-6 mt-10 md:mt-8 lg:mt-8;
+}
+
+h3 {
+    @apply text-purple-400 hover:text-purple-300 hover:underline font-semibold tracking-wide text-xl leading-loose mb-6 mt-10 md:mt-8 lg:mt-8;
+}
+
+h4 {
+    @apply text-gray-200 font-bold tracking-wide text-xl leading-loose mb-6 mt-10
+}
+
+p {
+    @apply text-gray-300 font-medium tracking-normal leading-7 text-lg mt-2;
+}
+
 
 .text {
     @apply text-gray-300 font-medium tracking-normal leading-7 text-lg;
