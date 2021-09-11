@@ -22,7 +22,6 @@
 
 <div class="body-wrapper">
 
-
     <div id="sideMenu" class="sidebar ">
 
         <x-sidebar-header />
@@ -36,7 +35,7 @@
                 <x-sidebar-group-item :route="route('v2.contribute')" text="Contribute" />
             </x-sidebar-item-group>
 
-            <x-sidebar-item-group title="HTTP">
+            <x-sidebar-item-group title="HTTP" class="dropdown-sidebar ">
                 <x-sidebar-group-item :route="route('http.v2.routes')" text="Routes" />
                 <x-sidebar-group-item :route="route('http.v2.request')" text="Request" />
                 <x-sidebar-group-item :route="route('http.v2.response')" text="Response" />
