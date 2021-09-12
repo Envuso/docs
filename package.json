@@ -5,23 +5,26 @@
         "development": "mix",
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot ",
+        "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
+        "axios": "^0.21.4",
         "babel-plugin-prismjs": "^2.1.0",
         "highlight.js": "^10.5.0",
         "highlightjs-line-numbers.js": "^2.8.0",
+        "laravel-echo": "^1.10.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.2.9",
-        "prismjs": "^1.24.1"
+        "prismjs": "^1.24.1",
+        "pusher-js": "^7.0.2"
     },
     "dependencies": {
         "autoprefixer": "^10.2.5",
         "laravel-mix-blade-reload": "^2.0.0",
-        "tailwindcss": "^2.1.1"
+        "tailwindcss": "^2.1.1",
+        "typesafe-local-storage": "^0.0.7"
     }
 }

@@ -22,8 +22,9 @@ class SidebarGroupItem extends Component
      */
     public function __construct($route, $text, $isChild = false)
     {
-        $this->route = $route;
-        $this->text  = $text;
+        //$this->route = \App\Services\MarkdownView::route($route);
+        $this->route   = $route;
+        $this->text    = $text;
         $this->isChild = $isChild;
 
         if (request()->fullUrlIs($route)) {

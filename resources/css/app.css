@@ -13,7 +13,7 @@
 .sidebar {
     @apply border-r-0 border-gray-800 bg-gray-900;
     @apply min-h-screen h-full overflow-x-hidden overflow-y-auto w-full fixed;
-    @apply sm:w-64 md:w-64 lg:w-64 sm:border-r-2 flex-col;
+    @apply sm:w-64 md:w-64 lg:w-64 sm:border-r-2 flex-col z-20;
 }
 
 .hamburger-enabled {
@@ -53,6 +53,34 @@
     font-family: 'Fira Code', monospace !important;
 }
 
+a {
+    @apply tracking-wide py-1.5 text-purple-400 hover:text-purple-200 transition;
+}
+
+.heading-permalink {
+    @apply text-white mr-1.5;
+}
+
+h1 {
+    @apply text-purple-400 font-semibold tracking-wide text-2xl leading-loose mb-6 mt-10 md:mt-8 lg:mt-8;
+}
+
+h2 {
+    @apply text-purple-400 font-semibold tracking-wide text-xl leading-loose mb-6 mt-10 md:mt-8 lg:mt-8;
+}
+
+h3 {
+    @apply text-purple-400 font-semibold tracking-wide text-lg leading-loose mb-6 mt-10 md:mt-8 lg:mt-8;
+}
+
+h4 {
+    @apply text-gray-200 font-bold tracking-wide text-lg leading-loose mb-6 mt-10
+}
+
+p {
+    @apply text-gray-300 font-medium tracking-normal leading-7 text-sm mt-2;
+}
+
 
 .text {
     @apply text-gray-300 font-medium tracking-normal leading-7 text-lg;
@@ -72,3 +100,62 @@
     font-size: 0.9rem;
 }
 
+@layer components {
+    .menu-item {
+        @apply py-2.5;
+    }
+
+    .menu-item > div {
+        @apply opacity-0 transition ease-in-out;
+    }
+
+    .menu-item > p {
+        @apply text-sm font-light tracking-wide hover:text-gray-50 transition text-gray-300 inline-block m-0;
+    }
+
+    .menu-item.menu-item-active > div {
+        @apply opacity-100 transition ease-in-out;
+    }
+
+    .menu-item.menu-item-active > p {
+        @apply text-purple-400 font-bold ml-0;
+    }
+
+    .menu-item.menu-item-active:hover > p {
+        @apply text-purple-400;
+    }
+
+    .item-group-title {
+
+    }
+
+    .item-group-title.active {
+
+    }
+
+    .item-group-title.active > p {
+        @apply font-bold text-purple-400;
+    }
+}
+
+@layer components {
+    .table-of-contents {
+
+    }
+
+    .table-of-contents ul {
+        @apply ml-3;
+    }
+    .table-of-contents > li > a {
+        @apply font-bold;
+    }
+
+    .table-of-contents a:before {
+        content: '#';
+        @apply font-bold text-white mr-1;
+    }
+
+    .table-of-contents a {
+        @apply py-1.5 inline-block text-sm;
+    }
+}
