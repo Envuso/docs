@@ -3366,6 +3366,11 @@ klona@^2.0.4:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
 
+laravel-echo@^1.10.0:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/laravel-echo/-/laravel-echo-1.11.2.tgz#64b62f114b98bcc30b96df0addf586022ae827ea"
+  integrity sha512-LiMTeWDLgI/bCTXJ8r96NcwE2sjWhzt3cIPDFri27EfMt9fcc1D/DBfXU5urOHaWrFwDQEHrdNzS16ewEQaWtA==
+
 laravel-mix-blade-reload@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/laravel-mix-blade-reload/-/laravel-mix-blade-reload-2.0.0.tgz#b2c1ff938f94df2d3fd42c492352932ee744c2e9"
@@ -4425,6 +4430,13 @@ purgecss@^4.0.3:
     postcss "^8.2.1"
     postcss-selector-parser "^6.0.2"
 
+pusher-js@^7.0.2:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-7.0.3.tgz#f81c78cdf2ad32f546caa7532ec7f9081ef00b8d"
+  integrity sha512-HIfCvt00CAqgO4W0BrdpPsDcAwy51rB6DN0VMC+JeVRRbo8mn3XTeUeIFjmmlRLZLX8rPhUtLRo7vPag6b8GCw==
+  dependencies:
+    tweetnacl "^1.0.3"
+
 qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
@@ -5169,6 +5181,11 @@ tty-browserify@0.0.0:
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
 
+tweetnacl@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
+  integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
+
 type-fest@^0.21.3:
   version "0.21.3"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.21.3.tgz#d260a24b0198436e133fa26a524a6d65fa3b2e37"
@@ -5181,6 +5198,11 @@ type-is@~1.6.17, type-is@~1.6.18:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.24"
+
+typesafe-local-storage@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/typesafe-local-storage/-/typesafe-local-storage-0.0.7.tgz#b9c95512cdf6c7fe8fab64e3183bc1f907e075d5"
+  integrity sha512-Kaasfiv3/76tVv0KdMA0jZEe3RIGI/EAALnn0g22idLZ0+iELU9JDA6cTlv0GlXvnOR+V6dDEc14NScxoeHVRQ==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"

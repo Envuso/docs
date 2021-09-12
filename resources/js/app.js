@@ -1,24 +1,12 @@
-require('./bootstrap');
-require('./sidemenu');
+import './bootstrap';
+import './SideMenu';
+import './PageRouting';
 
-//window.hljs = require('highlight.js');
-//import 'highlight.js/styles/ir-black.css';
-//import javascript from 'highlight.js/lib/languages/javascript';
-//import typescript from 'highlight.js/lib/languages/typescript';
-//import shell      from 'highlight.js/lib/languages/shell';
-//
-//
-//hljs.registerLanguage('javascript', javascript);
-//hljs.registerLanguage('typescript', typescript);
-//hljs.registerLanguage('shell', shell);
-//
-//hljs.highlightAll();
-
-import Prism from 'prismjs';
+import Prism                              from 'prismjs';
+import { createActiveGroupEventListener } from './PageActiveGroup';
 
 
 Prism.manual = true;
-
 Prism.plugins.NormalizeWhitespace.setDefaults({
     'remove-trailing'          : true,
     'remove-indent'            : true,
@@ -31,17 +19,3 @@ Prism.plugins.NormalizeWhitespace.setDefaults({
     'spaces-to-tabs'           : 4
 });
 Prism.highlightAll();
-
-var dropdown = document.getElementsByClassName("dropdown-sidebar");
-var i;
-for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-        } else {
-            dropdownContent.style.display = "block";
-        }
-    });
-}
