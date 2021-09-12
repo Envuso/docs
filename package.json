@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
+        "axios": "^0.21.4",
         "babel-plugin-prismjs": "^2.1.0",
         "highlight.js": "^10.5.0",
         "highlightjs-line-numbers.js": "^2.8.0",
