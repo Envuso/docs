@@ -136,9 +136,7 @@ p {
     .item-group-title.active > p {
         @apply font-bold text-purple-400;
     }
-}
 
-@layer components {
     .table-of-contents {
 
     }
@@ -159,3 +157,4 @@ p {
         @apply py-1.5 inline-block text-sm;
     }
 }
+

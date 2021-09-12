@@ -1,4 +1,8 @@
 <div>
+
+    <div class="table-of-contents">
+
+    </div>
     @foreach($page['sections'] as $section)
 
         <x-page-section-links.title>
