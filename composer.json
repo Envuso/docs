@@ -9,13 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
+        "ext-redis": "*",
         "algolia/algoliasearch-client-php": "^3.1",
+        "erusev/parsedown": "^1.7",
+        "erusev/parsedown-extra": "^0.8.1",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5",
-        "ext-redis": "*"
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

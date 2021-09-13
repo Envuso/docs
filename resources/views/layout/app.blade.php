@@ -41,7 +41,11 @@
 
     <x-sidebar.sidebar-menu />
 
+
     <div class="content">
+        <div id="search">
+
+        </div>
         @yield('content')
     </div>
 

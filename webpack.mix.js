@@ -13,12 +13,13 @@ require('laravel-mix-blade-reload');
  */
 
 mix.js("resources/js/app.js", "public/js")
+    .vue({version : 3})
     .postCss("resources/css/app.css", "public/css", [
         require("tailwindcss"),
     ])
     .webpackConfig({
         devServer : {
-            allowedHosts: ['docs.envuso.test']
+            allowedHosts : ['docs.envuso.test']
         }
     })
     .bladeReload()

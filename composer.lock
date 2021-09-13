@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "374f80e7b5778ab1cc6025b63e51b837",
+    "content-hash": "58c329c0c71baf36ab2da8ce3b1794e9",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -574,6 +574,107 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/erusev/parsedown/issues",
+                "source": "https://github.com/erusev/parsedown/tree/1.7.x"
+            },
+            "time": "2019-12-30T22:54:17+00:00"
+        },
+        {
+            "name": "erusev/parsedown-extra",
+            "version": "0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown-extra.git",
+                "reference": "91ac3ff98f0cea243bdccc688df43810f044dcef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown-extra/zipball/91ac3ff98f0cea243bdccc688df43810f044dcef",
+                "reference": "91ac3ff98f0cea243bdccc688df43810f044dcef",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "^1.7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ParsedownExtra": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "An extension of Parsedown that adds support for Markdown Extra.",
+            "homepage": "https://github.com/erusev/parsedown-extra",
+            "keywords": [
+                "markdown",
+                "markdown extra",
+                "parsedown",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/erusev/parsedown-extra/issues",
+                "source": "https://github.com/erusev/parsedown-extra/tree/0.8.x"
+            },
+            "time": "2019-12-30T23:20:37+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -5153,71 +5254,6 @@
             "time": "2020-07-13T06:12:54+00:00"
         },
         {
-            "name": "tonysm/turbo-laravel",
-            "version": "0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tonysm/turbo-laravel.git",
-                "reference": "b1f3314ad83dfda8d066afc353f3b9a156ca3aab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tonysm/turbo-laravel/zipball/b1f3314ad83dfda8d066afc353f3b9a156ca3aab",
-                "reference": "b1f3314ad83dfda8d066afc353f3b9a156ca3aab",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^8.47",
-                "php": "^7.4|^8.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^6.0",
-                "phpunit/phpunit": "^9.3"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "\\Tonysm\\TurboLaravel\\TurboServiceProvider"
-                    ],
-                    "aliases": {
-                        "Turbo": "\\Tonysm\\TurboLaravel\\Facades\\Turbo"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tonysm\\TurboLaravel\\": "src"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tony Messias",
-                    "email": "tonysm@hey.com",
-                    "homepage": "https://tonysm.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Turbo Laravel gives you a set of conventions to make the most out of the Hotwire stack (inspired by turbo-rails gem).",
-            "homepage": "https://github.com/tonysm/turbo-laravel",
-            "keywords": [
-                "tonysm",
-                "turbo-laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/tonysm/turbo-laravel/issues",
-                "source": "https://github.com/tonysm/turbo-laravel/tree/0.12.0"
-            },
-            "time": "2021-07-23T21:16:59+00:00"
-        },
-        {
             "name": "vlucas/phpdotenv",
             "version": "v5.3.0",
             "source": {
@@ -7938,8 +7974,9 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "ext-redis": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }

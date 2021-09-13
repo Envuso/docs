@@ -144,6 +144,7 @@ p {
     .table-of-contents ul {
         @apply ml-3;
     }
+
     .table-of-contents > li > a {
         @apply font-bold;
     }
@@ -155,6 +156,17 @@ p {
 
     .table-of-contents a {
         @apply py-1.5 inline-block text-sm;
+    }
+
+
+    .search-results {
+        max-height: 300px;
+        @apply bg-black w-full shadow-lg overflow-hidden rounded-b-lg h-full;
+
+    }
+
+    .search-results em {
+        @apply bg-purple-300 rounded-md bg-opacity-50;
     }
 }
 

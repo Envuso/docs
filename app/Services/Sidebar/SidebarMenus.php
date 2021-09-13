@@ -50,6 +50,11 @@ class SidebarMenus
         return Cache::get('version-links');
     }
 
+    public static function links()
+    {
+        return Cache::get('links');
+    }
+
     public static function groups()
     {
         return Cache::get('groups');

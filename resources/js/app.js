@@ -1,9 +1,9 @@
 import './bootstrap';
 import './SideMenu';
 import './PageRouting';
+import './Search/Search';
 
-import Prism                              from 'prismjs';
-import { createActiveGroupEventListener } from './PageActiveGroup';
+import Prism from 'prismjs';
 
 
 Prism.manual = true;

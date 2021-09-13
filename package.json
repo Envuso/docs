@@ -10,6 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@vue/compiler-sfc": "^3.2.11",
         "axios": "^0.21.4",
         "babel-plugin-prismjs": "^2.1.0",
         "highlight.js": "^10.5.0",
@@ -19,12 +20,18 @@
         "lodash": "^4.17.19",
         "postcss": "^8.2.9",
         "prismjs": "^1.24.1",
-        "pusher-js": "^7.0.2"
+        "pusher-js": "^7.0.2",
+        "vue-loader": "^16.2.0"
     },
     "dependencies": {
+        "@algolia/autocomplete-js": "^1.4.0",
+        "@algolia/autocomplete-theme-classic": "^1.4.0",
+        "algoliasearch": "^4.10.5",
         "autoprefixer": "^10.2.5",
         "laravel-mix-blade-reload": "^2.0.0",
         "tailwindcss": "^2.1.1",
-        "typesafe-local-storage": "^0.0.7"
+        "typesafe-local-storage": "^0.0.7",
+        "vue": "^3.2.11",
+        "vue-instantsearch": "^4.0.0"
     }
 }
