@@ -58,7 +58,7 @@ import algoliasearch from 'algoliasearch/lite';
 
 const algoliaClient = algoliasearch(
     'OP5ZZIL9Y5',
-    'a745bb23f1f3bf495b114f813143bc30'
+    '3baf427b9af06eb7925d02d280ccb581'
 );
 
 const searchClient = {
