@@ -1,6 +1,6 @@
 import Prism              from 'prismjs';
 import { setActiveGroup } from './PageActiveGroup';
-
+import {scrollToTop}      from './ScrollToTop';
 
 document.addEventListener('DOMContentLoaded', function () {
     for (let element of document.getElementsByClassName('menu-item')) {
