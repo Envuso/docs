@@ -41,12 +41,18 @@
 
     <x-sidebar.sidebar-menu />
 
-
-    <div class="content">
-        <div id="search">
-
-        </div>
+    <div class="content" id="content-wrapper">
         @yield('content')
+
+        <button
+            id="scroll-to-top"
+            title="Go to top"
+            class="opacity-0 transition fixed right-6 bottom-6 bg-gray-800 hover:bg-gray-700 transition shadow-lg rounded-full p-2 z-60"
+        >
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+            </svg>
+        </button>
     </div>
 
 </div>

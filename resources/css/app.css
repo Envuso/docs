@@ -6,6 +6,18 @@
 
 @import './../css/prism-material-oceanic.css';
 
+:not(pre) > code {
+    padding: 0.3em;
+    font-size: 0.9rem;
+    color: #c3cee3;
+    background: rgb(15, 15, 18);
+    font-family: 'Fira Code', monospace !important;
+    line-height: 1.5em;
+    border-radius: 0.75rem;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .body-wrapper {
     @apply flex overflow-hidden h-screen relative;
 }
@@ -81,6 +93,13 @@ p {
     @apply text-gray-300 font-medium tracking-normal leading-7 text-sm mt-2;
 }
 
+ul {
+    @apply list-disc list-inside mb-4;
+}
+
+li {
+    @apply text-gray-300 font-medium tracking-normal leading-7 text-sm mt-2;
+}
 
 .text {
     @apply text-gray-300 font-medium tracking-normal leading-7 text-lg;
@@ -138,11 +157,11 @@ p {
     }
 
     .table-of-contents {
-
+        @apply list-none list-outside;
     }
 
     .table-of-contents ul {
-        @apply ml-3;
+        @apply ml-3 list-none list-outside mb-4;
     }
 
     .table-of-contents > li > a {
@@ -155,7 +174,7 @@ p {
     }
 
     .table-of-contents a {
-        @apply py-1.5 inline-block text-sm;
+        @apply py-0.5 inline-block text-sm;
     }
 
 

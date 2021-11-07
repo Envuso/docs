@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Services\Documentation;
-use Arr;
-use Str;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+
 
 class DocumentationController extends Controller
 {
     public function redirect()
     {
-        return redirect(Arr::first(Documentation::versionLinks())['url']);
+        return redirect(Arr::last(Documentation::versionLinks())['url']);
     }
 
     public function page($page)

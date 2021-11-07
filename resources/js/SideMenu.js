@@ -1,6 +1,4 @@
-import { LocalStorage }                                                    from 'typesafe-local-storage';
 import { createActiveGroupEventListener, setCurrentActiveGroupFromWindow } from './PageActiveGroup';
-import { clearActiveMenuItems, closeActiveMenuItems }                      from './PageRouting';
 
 
 function toggleMenu()

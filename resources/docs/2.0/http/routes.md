@@ -103,3 +103,31 @@ async users(@param	type : string) {
     // type will contain the content from the route parameter
 }
 ```
+
+## Accessing the authenticated user 
+```typescript
+import { get, request, user } from "@envuso/core/Routing";
+
+@get('/user')
+async user(@user user : User) {
+    
+}
+```
+
+## Data transfer object 
+```typescript
+import { get, dto, request } from "@envuso/core/Routing";
+
+@get('/dto')
+async user(@dto() dto : SomeDtoClass) {
+    // dto will now contain all request data on the data transfer object
+    // as long as they have vars/validators set
+}
+
+@get('/dto')
+async user(@dto(false) dto : SomeDtoClass) {
+	// Using @dto(false) will prevent validations from running
+}
+
+
+```

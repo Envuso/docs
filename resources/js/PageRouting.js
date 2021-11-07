@@ -32,6 +32,7 @@ function getPage(pageUrl, pushState = false)
     axios(pageUrl).then(({data}) => {
         document.getElementById('page_content').innerHTML = data.view;
         document.getElementById('canonical').setAttribute('href', data.url);
+        scrollToTop();
         document.title = `Envuso - ${data.title}`;
 
         setActiveGroup(data.activeGroup.route);

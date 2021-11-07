@@ -7,7 +7,8 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "mix --production",
+        "watch-docs": "node watch-docs.js"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.11",
@@ -28,6 +29,7 @@
         "@algolia/autocomplete-theme-classic": "^1.4.0",
         "algoliasearch": "^4.10.5",
         "autoprefixer": "^10.2.5",
+        "chokidar": "^3.5.2",
         "laravel-mix-blade-reload": "^2.0.0",
         "tailwindcss": "^2.1.1",
         "typesafe-local-storage": "^0.0.7",
