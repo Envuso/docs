@@ -1,3 +1,8 @@
+/*code {*/
+/*    --tw-shadow: 0 10px 15px -3px rgba(255, 0, 0, 0.1), 0 4px 6px -2px rgba(255, 0, 0, 0.05)!important;*/
+/*    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)!important;*/
+/*}*/
+
 code[class*="language-"],
 pre[class*="language-"] {
     text-align: left;
@@ -19,8 +24,8 @@ pre[class*="language-"] {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 0.75rem;
-    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    /*--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);*/
+    /*box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);*/
 
     -webkit-hyphens: none;
     -moz-hyphens: none;
@@ -42,14 +47,16 @@ pre[class*="language-"] ::selection {
     background: #363636;
 }
 
-:not(pre) > code[class*="language-"] {
-    white-space: normal;
+:not(pre) > code, :not(pre) > code[class*="language-"] {
     padding: 0.3em;
     font-size: 0.9rem;
+    color: #c3cee3;
+    background: rgb(15, 15, 18);
+    font-family: 'Fira Code', monospace !important;
+    line-height: 1.5em;
     border-radius: 0.5rem;
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    background: rgb(15, 15, 18);
 }
 
 pre[class*="language-"] {

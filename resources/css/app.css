@@ -6,17 +6,7 @@
 
 @import './../css/prism-material-oceanic.css';
 
-:not(pre) > code {
-    padding: 0.3em;
-    font-size: 0.9rem;
-    color: #c3cee3;
-    background: rgb(15, 15, 18);
-    font-family: 'Fira Code', monospace !important;
-    line-height: 1.5em;
-    border-radius: 0.75rem;
-    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
+
 
 .body-wrapper {
     @apply flex overflow-hidden h-screen relative;
