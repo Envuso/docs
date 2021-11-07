@@ -320,7 +320,8 @@ For more information on cookies please visit the [cookie documentation](/2.0/htt
 
 ## Retrieve an item that was flashed onto the session
 
-See the SESSION documentation for a better explanation on this TODO: Session docs/flashing
+See the [session documentation](2.0/http/sessions#content-flashing-data-onto-the-session)
+for a better explanation on this
 
 Optionally accepts a default parameter as the second value. If none is specified it will be null.
 

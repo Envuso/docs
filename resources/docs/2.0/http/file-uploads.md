@@ -51,16 +51,24 @@ request().setUploadedFile(file)
 UploadedFileContract / UploadedFile class instances are used to represent file uploads everywhere in the framework
 
 ### Get the mimetype of the uploaded file
+Has the potential to return null if it's an unsupported file type.
+
+All supported file types are listed [here](https://github.com/sindresorhus/file-type#supported-file-types)
+
+In the case it returns null, you can use [getMimeType()](2.0/http/file-uploads#content-get-original-mime-type-of-the-file)
 
 ```typescript
 file.getMimeType() // returns MimeType;
 ```
 
 ### Get original mime type of the file
+This is potentially risky to use.
 
-This should only be used as a fallback if {@see getMimeType()} returns null
+If you're unsure about the risks, please take a read here:
+<a target="blank" href="https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html
+</a>
 
-It might not be a supported file type in this case. @see https://github.com/sindresorhus/file-type#supported-file-types
+This should only be used as a fallback if [getMimeType()](/2.0/http/file-uploads#content-get-mime-type) returns null
 
 ```typescript
 file.getOriginalMimeType() // returns MimeType;
@@ -73,19 +81,23 @@ file.getEncoding() // returns string;
 ```
 
 ### Get the file extension
+This is theoretically safe and taken from the file contents directly. But it does have a small chance to return null.
 
-This is theoretically safe and taken from the file contents directly.
+All supported file types are listed [here](https://github.com/sindresorhus/file-type#supported-file-types)
+
+In the case it returns null, you can use getOriginalExtension() below
 
 ```typescript
 file.getExtension() // returns FileExtension;
 ```
 
-There is small chances, this could fail to get an extension, I haven't personally ran into this issue.
+**This method is potentially risky to use**
 
-In those scenarios, we can fall back to reading the extension from the file name uploaded... but **this is dangerous**
+It should only be used if you cannot use getExtension() above.
 
-It might not be a supported file type in this case. @see https://github.com/sindresorhus/file-type#supported-file-types
-
+If you're unsure about the risks, please take a read here:
+<a target="blank" href="https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html
+</a>
 ```typescript
 file.getOriginalExtension() // returns FileExtension;
 ```
