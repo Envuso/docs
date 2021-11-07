@@ -2,7 +2,7 @@ import './bootstrap';
 import './SideMenu';
 import './ScrollToTop';
 import './PageRouting';
-import './Search/Search';
+//import './Search/Search';
 
 import Prism from 'prismjs';
 
