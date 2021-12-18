@@ -192,21 +192,43 @@ class SidebarMenus
     private function versionTwo()
     {
         return [
-            new SidebarItem([
-                'route' => '2.0/prologue',
-                'title' => 'Prologue',
-                'pages' => [
-                    ['title' => 'Release notes', 'route' => '2.0/prologue/release-notes'],
-                    ['title' => 'Contribute', 'route' => '2.0/prologue/contribute'],
-                ],
-                'sub'   => [],
-            ]),
+            // new SidebarItem([
+            //     'route' => '2.0/prologue',
+            //     'title' => 'Prologue',
+            //     'pages' => [
+            //         ['title' => 'Release notes', 'route' => '2.0/prologue/release-notes'],
+            //         ['title' => 'Contribute', 'route' => '2.0/prologue/contribute'],
+            //     ],
+            //     'sub'   => [],
+            // ]),
             new SidebarItem([
                 'route' => '2.0/getting-started',
                 'title' => 'Getting-started',
                 'pages' => [
                     ['title' => 'Setup', 'route' => '2.0/getting-started/setup'],
                     ['title' => 'CLI', 'route' => '2.0/getting-started/cli'],
+                ],
+                'sub'   => [],
+                ]),
+            new SidebarItem([
+                'route' => '2.0/configuration',
+                'title' => 'Configuration',
+                'pages' => [
+                    ['title' => 'Overview', 'route' => '2.0/configuration/overview'],
+                    ['title' => 'App', 'route' => '2.0/configuration/app'],
+                    // ['title' => 'Auth', 'route' => '2.0/configuration/auth'],
+                    // ['title' => 'Database', 'route' => '2.0/configuration/database'],
+                    // ['title' => 'FilesystemPaths', 'route' => '2.0/configuration/filesystempaths'],
+                    // ['title' => 'Inertia', 'route' => '2.0/configuration/inertia'],
+                    // ['title' => 'Queue', 'route' => '2.0/configuration/queue'],
+                    // ['title' => 'Redis', 'route' => '2.0/configuration/redis'],
+                    // ['title' => 'Serialization', 'route' => '2.0/configuration/serialization'],
+                    // ['title' => 'Server', 'route' => '2.0/configuration/server'],
+                    // ['title' => 'Services', 'route' => '2.0/configuration/services'],
+                    // ['title' => 'Session', 'route' => '2.0/configuration/session'],
+                    // ['title' => 'StaticAsset', 'route' => '2.0/configuration/staticasset'],
+                    // ['title' => 'Storage', 'route' => '2.0/configuration/storage'],
+                    // ['title' => 'Websockets', 'route' => '2.0/configuration/websockets'],
                 ],
                 'sub'   => [],
             ]),
@@ -263,6 +285,7 @@ class SidebarMenus
                     ['title' => 'Encryption/hashing', 'route' => '2.0/additional/encryption-hashing'],
                     ['title' => 'Storage', 'route' => '2.0/additional/storage'],
                     ['title' => 'Static Assets', 'route' => '2.0/additional/static-assets'],
+                    ['title' => 'InertiaJS', 'route' => '2.0/additional/inertia'],
                 ],
                 'sub'   => [],
             ]),
